@@ -1,0 +1,19 @@
+<md-card>
+  <md-card-content>
+    <span x-large>Your Content Here</span>
+    <!--
+      <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
+      Rather than wiring up two-way data-binding ourselves with [value] and (input)
+      we can use Angular's [(ngModel)] syntax
+      <input type="text" [(ngModel)]="localState.value" autofocus>
+    -->
+    <md-card>
+      For hot module reloading run
+      <pre>npm run start:hmr</pre>
+    </md-card>
+
+    <hr>
+    <pre>this.localState = {{ localState | json }}</pre>
+
+  </md-card-content>
+</md-card>

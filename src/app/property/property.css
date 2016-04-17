@@ -36,6 +36,7 @@
   background-color: #21ba45;
   display: none;
   border: 1px 1px 1px 1px;
+  color: white;
 }
 
 .property-card-add-button:hover {
@@ -49,6 +50,7 @@
   background-color: #db2828;
   display: none;
   border: 1px 1px 1px 1px;
+  color: white;
 }
 
 .property-card-remove-button:hover {

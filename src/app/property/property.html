@@ -12,8 +12,8 @@
   <md-card-actions>
     <span class="property-card-caption">
       <span class="property-card-price">Price: {{property.price}}</span>
-      <button md-button class="property-card-add-button" *ngIf="!property.isSaved">add property</button>
-      <button md-button class="property-card-remove-button" *ngIf="property.isSaved">remove property</button>
+      <button (click)="add($event, property)" *ngIf="!property.isSaved" md-button class="property-card-add-button">add property</button>
+      <button (click)="remove($event, property)" *ngIf="property.isSaved" md-button class="property-card-remove-button">remove property</button>
     </span>
   </md-card-actions>
 </md-card>

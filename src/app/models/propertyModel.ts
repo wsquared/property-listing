@@ -15,12 +15,12 @@ const PropertyRecord = Record({
 
 export class PropertyModel extends PropertyRecord {
 
-  id: number;
+  id: string;
   mainImage: string;
   price: string;
   agency: {
     brandingColors: {
-      primary: number;
+      primary: string;
     }
     logo: string;
   };

@@ -2,7 +2,7 @@ import {Component, Input} from 'angular2/core';
 import {Property} from '../property/property.component';
 import {PropertyModel} from '../models/propertyModel';
 import {List} from 'immutable';
-import * as PropertyActions from '../actions/property-action';
+import * as PropertyActions from '../actions/property-list-action';
 
 
 @Component({
@@ -17,4 +17,9 @@ export class PropertyList {
 
   constructor() {
   }
+
+  addProperty(event): void {
+    console.log(event);
+  }
+
 }

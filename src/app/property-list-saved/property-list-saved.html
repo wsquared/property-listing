@@ -1,4 +1,3 @@
 <div *ngFor="#savedProperty of savedPropertyList" class="property-list-saved-container">
-  <property [property]="savedProperty">
-  </property>
+  <property [property]="savedProperty" (removeProperty)="removeProperty($event)"></property>
 </div>

@@ -1,4 +1,3 @@
 <div class="property-list-container" *ngFor="#property of propertyList">
-  <property [property]="property">
-  </property>
+  <property [property]="property" (addProperty)="addProperty($event)"></property>
 </div>

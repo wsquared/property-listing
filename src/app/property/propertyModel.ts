@@ -8,7 +8,7 @@ const PropertyRecord = Record({
     brandingColors: {
       primary: ''
     },
-    logo: '',
+    logo: ''
   }
 });
 

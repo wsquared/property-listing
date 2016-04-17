@@ -1,6 +1,7 @@
 import {Component} from 'angular2/core';
 import {PropertyService} from '../property-service/property-service';
 import {PropertyList} from '../property-list/property-list.component';
+import {SavedPropertyList} from '../property-list-saved/property-list-saved.component';
 import {PropertyModel} from '../models/propertyModel';
 import {List} from 'immutable';
 
@@ -9,7 +10,7 @@ import {List} from 'immutable';
   templateUrl: './app/property-container/property-container.html',
   styleUrls: ['./app/property-container/property-container.css'],
   providers: [PropertyService],
-  directives: [PropertyList]
+  directives: [PropertyList, SavedPropertyList]
 })
 export class PropertyContainer {
 

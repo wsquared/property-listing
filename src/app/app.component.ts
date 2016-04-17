@@ -43,6 +43,8 @@ import {RouterActive} from './router-active';
     }
     footer {
       padding: 10px;
+      color: #484848;
+      font-family: Museo-Sans-500,helvetica,arial,sans-serif;
     }
   `],
   template: `

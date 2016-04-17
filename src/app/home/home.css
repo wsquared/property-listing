@@ -1,0 +1,10 @@
+.home-card-container {
+  background-color: #36454f;
+  height: 500px;
+}
+
+.home-card-content {
+  font-family: Museo-Sans-500, helvetica, arial, sans-serif;
+  color: white;
+  padding: 15px;
+}

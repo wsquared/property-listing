@@ -2,21 +2,29 @@
     display: -webkit-flex;
     display: flex;
     width: 100%;
-    background-color: lightgrey;
+    background-color: #36454f;
 }
 
 .property-flex-item {
-    background-color: cornflowerblue;
+    background-color: #36454f;
     width: 50%;
     margin: 10px;
     border-radius: 10px;
+    border-style: dotted;
+    border-width: 2px 2px 2px 2px;
+    border-color: white;
 }
 
 .property-flex-header {
-    background-color: cornflowerblue;
-    width: 50%;
-    margin: 10px;
+    background-color: #e4002b;
+    font-family: Museo-Sans-500, helvetica, arial, sans-serif;
+    color: white;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
     padding: 10px;
+    border-radius: 3px;
 }
 
 .property-flex-content {

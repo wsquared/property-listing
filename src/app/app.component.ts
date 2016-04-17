@@ -31,9 +31,15 @@ import {RouterActive} from './router-active';
     }
     md-toolbar li {
       display: inline;
+      font-family: Museo-Sans-500,helvetica,arial,sans-serif;
     }
-    md-toolbar li.active {
-      background-color: lightgray;
+    md-toolbar li a {
+      text-decoration: none;
+      color: #484848;
+      padding-right: 10px;
+    }
+    md-toolbar a.router-link-active {
+      color: #e4002b;
     }
     footer {
       padding: 10px;
@@ -41,14 +47,12 @@ import {RouterActive} from './router-active';
   `],
   template: `
     <header>
-      <md-toolbar color="primary">
+      <md-toolbar>
         <nav>
           <ul>
-            |
             <li router-active>
               <a [routerLink]=" ['Home'] ">Home</a>
             </li>
-            |
             <li router-active>
             <a [routerLink]=" ['Properties'] ">Properties</a>
             </li>

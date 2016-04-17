@@ -2,3 +2,11 @@
     min-width: 100%;
     max-width: 100%;
 }
+
+.property-card:hover {
+    background-color: darkgrey;
+}
+
+.property-card-caption {
+  padding: 15px;
+}

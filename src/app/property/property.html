@@ -1,4 +1,4 @@
-<md-card>
+<md-card class="property-card">
   <md-card-header [style.background]="property.agency.brandingColors.primary">
     <md-card-header-text>
     </md-card-header-text>
@@ -9,4 +9,7 @@
   <md-card-content>
     <img class="property-card-avatar-background" src="{{property.mainImage}}" alt="">
   </md-card-content>
+  <md-card-actions>
+    <div class="property-card-caption">Price: {{property.price}}</div>
+  </md-card-actions>
 </md-card>

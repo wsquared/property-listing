@@ -1,12 +1,2 @@
-<md-card *ngFor="#property of properties">
-  <md-card-header [style.background]="property.agency.brandingColors.primary">
-    <md-card-header-text>
-    </md-card-header-text>
-    <md-card-avatar>
-      <img src="{{property.agency.logo}}">
-    </md-card-avatar>
-  </md-card-header>
-  <md-card-content>
-    <img class="property-list-avatar-background" src="{{property.mainImage}}" alt="">
-  </md-card-content>
-</md-card>
+<property *ngFor="#property of propertyList" [property]="property">
+</property>

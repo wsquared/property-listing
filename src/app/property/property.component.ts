@@ -1,8 +1,15 @@
-import {Component} from 'angular2/core';
+import {Component, ChangeDetectionStrategy, Input} from 'angular2/core';
+import {PropertyModel} from '../models/propertyModel';
 
 @Component({
-  templateUrl: 'src/app/property/property.html',
+  selector: 'property',
+  templateUrl: './app/property/property.html',
+  styleUrls: ['./app/property/property.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class Property {
-  constructor() {}
+
+  @Input() property: PropertyModel;
+  constructor() { }
+
 }

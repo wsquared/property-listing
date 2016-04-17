@@ -1,5 +1,5 @@
 import {List} from 'immutable';
-import {PropertyModel} from '../property/propertyModel';
+import {PropertyModel} from '../models/propertyModel';
 
 export const LOAD_PROPERTIES: string = 'LOAD_PROPERTIES';
 

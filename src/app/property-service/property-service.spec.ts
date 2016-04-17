@@ -18,7 +18,7 @@ import {
   Response,
   HTTP_PROVIDERS
 } from 'angular2/http';
-import { MockBackend } from 'angular2/http/testing';
+import {MockBackend} from 'angular2/http/testing';
 import {PropertyService} from './property-service';
 
 
@@ -40,7 +40,6 @@ describe('PropertyService Service', () => {
     service.getProperties().subscribe(
       res => {
         let properties = res.json().map(property => property);
-        console.log(properties);
       }
     );
   }));

@@ -1,19 +1,12 @@
 <md-card>
+  <md-card-header [style.background]="property.agency.brandingColors.primary">
+    <md-card-header-text>
+    </md-card-header-text>
+    <md-card-avatar>
+      <img src="{{property.agency.logo}}">
+    </md-card-avatar>
+  </md-card-header>
   <md-card-content>
-    <span x-large>Your Content Here</span>
-    <!--
-      <input type="text" [value]="localState.value" (input)="localState.value = $event.target.value" autofocus>
-      Rather than wiring up two-way data-binding ourselves with [value] and (input)
-      we can use Angular's [(ngModel)] syntax
-      <input type="text" [(ngModel)]="localState.value" autofocus>
-    -->
-    <md-card>
-      For hot module reloading run
-      <pre>npm run start:hmr</pre>
-    </md-card>
-
-    <hr>
-    <pre>this.localState = {{ localState | json }}</pre>
-
+    <img class="property-card-avatar-background" src="{{property.mainImage}}" alt="">
   </md-card-content>
 </md-card>

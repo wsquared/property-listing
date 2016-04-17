@@ -6,10 +6,14 @@
       <img src="{{property.agency.logo}}">
     </md-card-avatar>
   </md-card-header>
-  <md-card-content>
+  <md-card-content class="property-card-content">
     <img class="property-card-avatar-background" src="{{property.mainImage}}" alt="">
   </md-card-content>
   <md-card-actions>
-    <div class="property-card-caption">Price: {{property.price}}</div>
+    <span class="property-card-caption">
+      <span class="property-card-price">Price: {{property.price}}</span>
+      <button md-button class="property-card-add-button" *ngIf="!property.isSaved">add property</button>
+      <button md-button class="property-card-remove-button" *ngIf="property.isSaved">remove property</button>
+    </span>
   </md-card-actions>
 </md-card>

@@ -9,7 +9,8 @@ const PropertyRecord = Record({
       primary: ''
     },
     logo: ''
-  }
+  },
+  isSaved: false
 });
 
 export class PropertyModel extends PropertyRecord {
@@ -23,6 +24,7 @@ export class PropertyModel extends PropertyRecord {
     }
     logo: string;
   };
+  isSaved: boolean;
 
   constructor(props) {
     super(props);

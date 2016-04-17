@@ -33,7 +33,22 @@ export class PropertyContainer {
         // TODO: Load into property-list store
 
 
-        this.savedPropertyList = List<PropertyModel>(properties.saved);
+        this.savedPropertyList = properties
+          .saved
+          .map(saved => new PropertyModel(
+            {
+              id: saved.id,
+              mainImage: saved.mainImage,
+              price: saved.price,
+              agency: {
+                brandingColors: {
+                  primary: saved.agency.brandingColors.primary
+                },
+                logo: saved.agency.logo
+              },
+              isSaved: true
+            }
+          ));
         // TODO: Load into the saved-property-list store
       }
       );

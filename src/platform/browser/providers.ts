@@ -17,6 +17,10 @@ import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2
 // TODO(gdi2290): replace with @angular2-material/all
 import {MATERIAL_PROVIDERS} from './angular2-material2';
 
+const provider = require('ng2-redux').provider;
+import configureStore from '../../app/stores/configureStore';
+const store = configureStore();
+
 /*
 * Application Providers/Directives/Pipes
 * providers/directives/pipes that only live in our browser environment
@@ -26,6 +30,7 @@ export const APPLICATION_PROVIDERS = [
   ...HTTP_PROVIDERS,
   ...MATERIAL_PROVIDERS,
   ...ROUTER_PROVIDERS,
+  provider(store),
   provide(LocationStrategy, { useClass: HashLocationStrategy })
 ];
 

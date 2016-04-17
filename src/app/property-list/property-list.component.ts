@@ -14,7 +14,6 @@ import * as PropertyActions from '../actions/property-list-action';
 export class PropertyList {
 
   @Input() propertyList: List<PropertyModel>;
-
   constructor() {
   }
 

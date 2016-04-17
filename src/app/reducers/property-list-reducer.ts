@@ -1,14 +1,12 @@
 import {List} from 'immutable';
 import {PropertyModel} from '../models/propertyModel';
+import {LOAD_PROPERTIES, IPropertyAction} from '../actions/property-list-action';
 
-import {
-LOAD_PROPERTIES,
-IPropertyAction
-} from '../actions/property-action';
+export default function (
+  state: List<PropertyModel> = List<PropertyModel>(),
+  action: IPropertyAction) {
 
-export default function(state: List<PropertyModel>, action: IPropertyAction) {
-
-  function indexOf(id: number): number {
+  function indexOf(id: string): number {
     return state.findIndex((i: PropertyModel) => i.id === id);
   }
 
@@ -17,6 +15,6 @@ export default function(state: List<PropertyModel>, action: IPropertyAction) {
       state = List<PropertyModel>(action.propertyList);
       return state;
     default:
-      return state;
+      return List<PropertyModel>();
   }
 }

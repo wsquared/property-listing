@@ -1,4 +1,4 @@
-https://travis-ci.org/wsquared/frontend-test.svg?branch=master
+[![Build Status](https://travis-ci.org/wsquared/property-listing.svg?branch=master)](https://travis-ci.org/wsquared/property-listing)
 
 # Getting Started
 ## Dependencies

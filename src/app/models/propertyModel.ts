@@ -1,6 +1,6 @@
 import {Record} from 'immutable';
 
-const PropertyRecord = Record({
+const propertyRecord = Record({
   id: 0,
   mainImage: '',
   price: '',
@@ -13,7 +13,7 @@ const PropertyRecord = Record({
   isSaved: false
 });
 
-export class PropertyModel extends PropertyRecord {
+export class PropertyModel extends propertyRecord {
 
   id: string;
   mainImage: string;

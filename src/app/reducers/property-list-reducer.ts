@@ -40,4 +40,5 @@ export default function (
     default:
       return { results: List<PropertyModel>(), saved: List<PropertyModel>() };
   }
+
 }

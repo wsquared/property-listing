@@ -16,8 +16,8 @@ export class SavedPropertyList implements OnDestroy {
 
   @Input() savedPropertyList: List<PropertyModel>;
 
+  public propertyListActions: typeof PropertyListActions;
   private unsubscribe: Function;
-  private propertyListActions: typeof PropertyListActions;
 
   constructor( @Inject('ngRedux') ngRedux) {
     this.unsubscribe = ngRedux.connect(this.mapStateToThis, this.mapDispatchToThis)(this);

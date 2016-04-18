@@ -1,3 +1,5 @@
+https://travis-ci.org/wsquared/frontend-test.svg?branch=master
+
 # Getting Started
 ## Dependencies
 What you need to run this app:

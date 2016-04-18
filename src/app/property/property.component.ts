@@ -18,12 +18,12 @@ export class Property {
   add(event, property: PropertyModel): void {
     event.preventDefault();
     event.stopPropagation();
-    this.addProperty.emit({ id: property.id });
+    this.addProperty.emit(property);
   }
 
   remove(event, property: PropertyModel): void {
     event.preventDefault();
     event.stopPropagation();
-    this.removeProperty.emit({ id: property.id });
+    this.removeProperty.emit(property);
   }
 }

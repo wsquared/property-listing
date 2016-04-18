@@ -22,20 +22,22 @@ export class PropertyContainer implements OnDestroy {
   private unsubscribe: Function;
   private propertyListActions: typeof PropertyListActions;
 
-  constructor(@Inject('ngRedux') ngRedux, private propertyService: PropertyService) {
+  constructor( @Inject('ngRedux') ngRedux, private propertyService: PropertyService) {
     this.unsubscribe = ngRedux.connect(this.mapStateToThis, this.mapDispatchToThis)(this);
   }
 
   ngOnInit() {
     this.loadProperties();
   }
+
   ngOnDestroy() {
     this.unsubscribe();
   }
 
   mapStateToThis(state) {
     return {
-      propertyList: state.propertyList
+      propertyList: state.propertyList.results,
+      savedPropertyList: state.propertyList.saved
     };
   }
 
@@ -53,7 +55,7 @@ export class PropertyContainer implements OnDestroy {
 
         this.propertyListActions.load(List<PropertyModel>(properties.results));
 
-        this.savedPropertyList = properties
+        let savedProperties = properties
           .saved
           .map(saved => new PropertyModel(
             {
@@ -69,7 +71,8 @@ export class PropertyContainer implements OnDestroy {
               isSaved: true
             }
           ));
-        // TODO: Load into the saved-property-list store
+
+        this.propertyListActions.loadSaved(savedProperties);
       }
       );
   }

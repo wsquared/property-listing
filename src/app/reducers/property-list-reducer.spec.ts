@@ -8,7 +8,10 @@ describe('Property-list-reducer', () => {
 
   it('should return a new property list', () => {
     let expectedPropertyList = List<PropertyModel>(new PropertyModel({ id: 23 }));
-    let actualPropertyList = propertyListReducer(List<PropertyModel>(), propertyListActions.load(expectedPropertyList));
+    let actualPropertyList = propertyListReducer(
+      List<PropertyModel>(),
+      propertyListActions.load(expectedPropertyList)
+    );
     expect(actualPropertyList).toBe(expectedPropertyList);
   });
 

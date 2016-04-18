@@ -40,6 +40,8 @@ describe('PropertyService Service', () => {
     service.getProperties().subscribe(
       res => {
         let properties = res.json().map(property => property);
+
+        // TODO: check returns a list of properties
       }
     );
   }));
